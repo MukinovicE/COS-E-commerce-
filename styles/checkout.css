@@ -1,0 +1,239 @@
+.checkout{
+  display: flex;
+}
+
+
+#regForm {
+    background-color: #E5E5E5;
+    margin: -10px -10px;
+    padding: 100px;
+    max-width: 50%;
+    flex: 75%;
+  }
+
+
+
+  .col-25 {
+    flex: 25%;
+    margin-top: 5%;
+    margin-left: 2%;
+    max-width: 30%;
+  }
+
+  .cart h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin-left: 15%;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    
+  }
+
+  .column img{
+    padding-left: 30%;
+    width: 40%;
+  }
+
+  .column2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 0.75em;
+  }
+  
+  .productname{
+    padding-top: 10%;
+  }
+
+  .column2 span{
+    margin-top: 20%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .sub{
+    margin-top: 5%;
+  }
+
+  .subtotal{
+    margin-top: 1%;
+    margin-left: 15%;
+    border-top: 1px solid #C4C4C4;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    color: black;
+    font-size: 0.75em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+  }
+
+  .taxes{
+    margin-top: 1%;
+    margin-left: 15%;
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    color: black;
+    font-size: 0.75em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+  }
+
+  .cart-total{
+    margin-top: 5%;
+    margin-left: 15%;
+    border-top: 1px solid #C4C4C4;
+  
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    color: black;
+  }
+
+  .cart-total h3{
+    margin-left: 0%;
+  }
+
+
+
+
+  h1 a{
+    position: relative;
+    left: 40%;
+    top: -50%;
+    font-size: 2em;
+    color: white;
+    text-shadow:  2px 2px 2px black;
+    text-decoration: none;
+  }
+  
+  .form-inline { 
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 5%;
+}
+
+
+.form-inline input {
+  margin-top: 10%;
+  width: 45%;
+  vertical-align: middle;
+  margin: 0px 15px 0px 0;
+  padding: 10px;
+  background-color: #FAFAFA;
+  border: #FAFAFA;
+}
+
+.form-inline input:nth-child(2){
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+  input {
+    background-color: #FAFAFA;
+    padding: 10px;
+    width: 95%;
+    display: inline;
+    font-size: 17px;
+    border: #FAFAFA;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 5%;
+  }
+
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 1.5em;
+      font-weight: 400;
+      color: black;
+      margin-top: 10%;
+
+  }
+  
+
+  .info{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: black;
+    margin-top: 10%;
+  }
+
+#myDIV{
+    display: inline;
+}
+
+.btn {
+    width: 20%;
+    height: 10%;
+    border: none;
+    outline: none;
+    margin-right: 3%;
+    padding: 10px 16px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    
+  }
+  
+  
+  .active, .btn:hover {
+    border: 4px solid #5A85F2;
+  }
+
+
+  button {
+    width: 315px;
+    height: 48px;
+    background-color: #595959;
+    color: #E0E0E0;
+    cursor: pointer;
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  .tab {
+    display: none;
+  }
+
+  
+  .step {
+    margin: 2%;
+    color: black;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+ 
+  .step.active {
+    opacity: 1;
+  }
+  
+
+  .step.finish {
+    background-color: #595959;
+  }
+
+
+  footer{
+    margin-top: 0.5%;
+    text-align: center;
+    padding: 3px;
+    background-color: #EEF0EF;
+    color: #D2D6D4;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles/product.css">
+    <script src="../script.js"></script>
+    
+  </head>
+  <body>
+
+    <!-- header  -->
+    <header>
+      <div class = "container">
+        <!-- navbar -->
+        <nav class = "navbar">
+          <a href = "./women.html" class = "navbar-brand">Women</a>
+          <a href = "./men.html" class = "navbar-brand">Men</a>
+          <a href = "../index.html" class = "navbar-brand"><span style="color: red;">Sale</span></a>
+          <button onclick="location.href='../index.html'" type = "button" class = "navbar-toggler">COS</button>
+          
+          <a href = "index.html" class = "navbar-brand">Contact</a>
+          <a href = "index.html" class = "navbar-brand">Sign in</a>  
+          <div class = "cart">
+            <button type = "button" id = "cart-btn">
+              <span id = "cart-count-info"></span>
+              Cart
+            </button>
+            
+            <div class = "cart-container">
+              <div class = "cart-list">
+                
+              </div>
+
+              <div class = "cart-total">
+                <h3>Total: €</h3>
+                <span id = "cart-total-value"></span>
+              </div>
+              
+              <button onclick="location.href='./checkout.html'" class="checkout-btn" >CHECKOUT</button>
+
+
+            </div>
+          </div>
+        </nav>
+      
+
+  
+      </div>
+    </header>
+
+    <div class="container2">
+        
+
+      <div class="product">
+              
+         <div class="img-container">
+              <img id="imageBox" src="../images/prod4.png">
+              </div>
+    
+          <div class="product-small-img">
+                  <img src="../images/prod4.png" width="100%" class="small-img" onclick="gallery(this);" alt = "product image">
+          
+                  <img src="../images/prod_det2.png" width="100%" class="small-img" onclick="gallery(this);" >
+          
+                  <img src="../images/prod_det3.png" width="100%" class="small-img" onclick="gallery(this);" >
+              
+                  <img src="../images/prod_det4.png" width="100%" class="small-img" onclick="gallery(this);" >
+            
+                  <img src="../images/prod_det5.png" width="100%" class="small-img" onclick="gallery(this);"  >
+      </div>
+      </div>
+          
+
+      
+      <div class="info">
+
+          <div class="title">
+                  <p class = "product-name">Recycled polyester performance parka</p>
+                  <p class="price" data-price="€135">€135</p>
+              </div>
+  
+              <div class="desc1">
+                  <p>Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.<br><br> 
+
+                      - Relaxed fit<br>
+                      - Dropped shoulder<br>
+                      - Elasticated body<br>
+                      - Ribbed cuff<br><br>
+                      
+                      32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable<br>
+                      
+                      Back length of size XS/S is 70cm </p>
+              </div>
+  
+              <div class="addtocart">
+                  <section class = "products">
+      <div class = "container">
+        
+        <div class = "product-list">
+          <div class = "product-item">
+            <div class = "product-img">
+              <img src = "../images/prod4.png" class="image" >
+              <button type = "button" class = "add-to-cart-btn">
+                Add To Cart
+              </button>
+            </div>
+
+            <div class = "product-content">
+              <h3 class = "product-name">Recycled polyester performance parka</h3>
+              <span class = "product-category"></span>
+              <p class = "product-price">€135</p>
+            </div>
+          </div>
+              </div>
+              </div>
+              </section>
+              </div>
+  
+              <div class="desc2">
+                  <p>32% Polyamide / 29% Viscose / 23% Silk / 15% Cotton / 1% Elastane / Machine washable<br><br>
+
+                      Make sure that your favourite items remain long-loved pieces for years to come; read our product care guide and explore our selection of carefully chosen care products.<br><br>
+                      
+                      Product No:<br>
+                      0930647001</p>
+              </div>
+          </div>
+          
+
+
+          <div class="suggestion">
+              <div class="products">
+
+                  <div class="grid-item1">
+                      <p>You might also like</p>
+                  </div>
+
+                  <div class="grid-container">                 
+
+                   <div class="grid-item"><a href="./product.html" class="prod-info"><img src="../images/prod1.png">
+                    <p>Recycled polyester performance parka</p>
+                    <p class="price">€135</p></a> 
+                  </div>
+
+                <div class="grid-item"><a href="./product.html" class="prod-info"><img src="../images/prod2.png">
+                  <p>Recycled polyester performance parka</p>
+                  <p class="price">€135</p></a> 
+                 </div>
+
+                <div class="grid-item"><a href="./product.html" class="prod-info"><img src="../images/prod3.png">
+                <p>Recycled polyester performance parka</p>
+                <p class="price">€135</p></a> 
+                </div>
+                 </div>
+           </div>
+          </div>
+
+     </div>
+     
+
+     <footer>
+         <p>Copyright 2020</p>
+     </footer>
+
+     <script type="text/template" id="cartT">
+      <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+    <%= item.count %> piece<% if(item.count > 1)
+    {%>s
+    <%}%> for <%= item.total %>₹</span > </div>
+    <% }); %>
+    </script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+     
+     <script src="../app.js"></script>
+  </body>
+</html>

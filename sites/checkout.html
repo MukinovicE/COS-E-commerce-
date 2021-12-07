@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../styles/checkout.css">
+    
+    <title>COS</title>
+</head>
+
+
+<body>
+
+  <div class="checkout">
+    <form id="regForm" action="">
+        <h1><a href="../index.html">COS</a>  </h1>
+
+        <div style="margin-top: 1%; margin-left: 25%; font-size: 14px; font-weight: 400; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <span class="step">Information </span> >
+            <span class="step">  Payment </span> >
+            <span class="step"> Confirm</span>
+          
+          </div>
+
+        <div class="tab" >
+
+
+            <div class="title">Contact Information</div>
+            <input type="text" placeholder="E-mail..." oninput="this.className = ''" name="email" required>
+
+            <div class="title">Shipping Address</div>
+
+            <div class="form-inline">
+                <input type="text" placeholder="First Name" oninput="this.className = ''" name="firstname" required>
+ 
+                <input type="text" placeholder="Last Name" oninput="this.className = ''" name="lastname" required>
+            </div>
+
+            <input type="text" placeholder="Company (optional)" oninput="this.className = ''" name="company">
+
+            <input type="text" placeholder="Address" oninput="this.className = ''" name="address" required>
+
+            <input type="text" placeholder="Apartment, Suit, etc. (optional)" oninput="this.className = ''" name="apartment">
+
+            <div class="form-inline">
+                <input type="text" placeholder="Postal Code" oninput="this.className = ''" name="postalcode" required>
+ 
+                <input type="text" placeholder="City" oninput="this.className = ''" name="city" required>
+            </div>
+
+            <input type="text" placeholder="Country/Region" oninput="this.className = ''" name="country" required>
+
+            <input type="text" placeholder="Phone (optional)" oninput="this.className = ''" name="phone">
+        </div>
+
+        <div class="tab">
+            
+            <div class="title">Payment provider</div>
+
+            <div id="myDIV">
+                <button class="btn"><img src="../images/paypal.png"></button>
+                <button class="btn"><img src="../images/stripe.png"></button>
+                <button class="btn"><img src="../images/apple.png"></button>
+                <button class="btn"><img src="../images/klarna.png"></button>
+                
+              </div>
+
+        </div>
+
+        <div class="tab">
+            <div class="title">Confirm</div>
+
+            <div class="info">
+                email@email.com<br><br>
+
+                Max Mustermann<br>
+                Neutorgasse 49<br>
+                8010 Graz<br>
+                Austria<br><br>
+
+                +43 664 122 224 23<br><br>
+
+                PayPal (email@email.com)<br>
+            </div>
+
+        </div>
+
+            <div class="tab">
+                <div class="title">Thank you for your order!</div>
+
+                <div class="info">The order will be processed within next 48 hours.</div>
+                </div>
+          
+
+
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue to Payment</button>
+          </div>
+        </div>
+      </form>
+
+
+
+      <div class="col-25">
+        <div class="container">
+          <div class = "cart">
+            <h3>Cart</h3>
+            
+            <div class = "cart-container">
+              <div class = "cart-list">
+                <div class="row">
+                  <div class="column img">
+                    <img src="../images/prod4.png" width="120px" height="150px">
+                  </div>
+                  <div class="column2">
+                    <p class="productname">RECYCLED POLYESTER PERFORMANCE PARKA</p>
+                    <span style="color: #999999;">€135 x 1</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="column img">
+                    <img src="../images/prod3.png" width="120px" height="150px">
+                  </div>
+                  <div class="column2">
+                    <p class="productname">RECYCLED POLYESTER PERFORMANCE PARKA</p>
+                    <span style="color: #999999;">€135 x 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "sub">
+                <div class = "subtotal">
+                  <h4>Subtotal</h4>
+                  <span style="color: #999999;">€405</span>
+                </div>
+
+                <div class = "taxes">
+                  <h4>Taxes</h4>
+                  <span style="color: #999999;">€81</span>
+                </div>
+              </div>
+
+
+              <div class = "cart-total">
+                <h3>Total</h3>
+                <h3>€486</h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+      <footer>
+        <p>Copyright 2020</p>
+    </footer>
+
+
+
+
+     <script>
+      var currentTab = 0; 
+showTab(currentTab); 
+
+function showTab(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Continue to Payment";
+  }
+  
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  
+  var x = document.getElementsByClassName("tab");
+  
+  if (n == 1 && !validateForm()) return false;
+  
+  x[currentTab].style.display = "none";
+  
+  currentTab = currentTab + n;
+ 
+  if (currentTab >= x.length) {
+    
+    document.getElementById("regForm").submit();
+    return false;
+  }
+
+  showTab(currentTab);
+}
+
+function validateForm() {
+  
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = true;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script> 
+       
+</body>
+</html>
